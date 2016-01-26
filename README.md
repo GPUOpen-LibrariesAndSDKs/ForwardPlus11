@@ -1,4 +1,4 @@
-# AMD DX11 Forward+ Sample
+# AMD Forward+ Sample
 <img src="forwardplus11/media/Thumbnail.png" width="480" height="280" />
 
 The ForwardPlus11 DirectX 11 sample provides an example implementation of the Forward+ algorithm, which extends traditional forward rendering to support high numbers of dynamic lights while maintaining performance. It utilizes a Direct3D 11 compute shader (DirectCompute 5.0) to divide the screen into tiles and quickly cull lights against those tiles, resulting in per-tile light lists for the forward pixel shader.
