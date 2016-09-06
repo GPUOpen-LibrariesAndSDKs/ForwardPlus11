@@ -10,28 +10,10 @@
     <Filter Include="src\Shaders">
       <UniqueIdentifier>{06ADC7FB-7262-40F1-FB56-3AC8670B37F5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Shaders\SeparableFilter">
-      <UniqueIdentifier>{4AE40765-B6F1-354B-3FD8-3136ABE40102}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\src\AMD_ISA.inl">
-      <Filter>src</Filter>
-    </None>
     <None Include="..\src\Shaders\Line.hlsl">
       <Filter>src\Shaders</Filter>
-    </None>
-    <None Include="..\src\Shaders\SeparableFilter\FilterCommon.hlsl">
-      <Filter>src\Shaders\SeparableFilter</Filter>
-    </None>
-    <None Include="..\src\Shaders\SeparableFilter\FilterKernel.hlsl">
-      <Filter>src\Shaders\SeparableFilter</Filter>
-    </None>
-    <None Include="..\src\Shaders\SeparableFilter\HorizontalFilter.hlsl">
-      <Filter>src\Shaders\SeparableFilter</Filter>
-    </None>
-    <None Include="..\src\Shaders\SeparableFilter\VerticalFilter.hlsl">
-      <Filter>src\Shaders\SeparableFilter</Filter>
     </None>
     <None Include="..\src\Shaders\Sprite.hlsl">
       <Filter>src\Shaders</Filter>
@@ -43,6 +25,9 @@
     </ClInclude>
     <ClInclude Include="..\inc\ShaderCacheSampleHelper.h">
       <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\AMD_Mesh.h">
+      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Geometry.h">
       <Filter>src</Filter>
@@ -71,8 +56,14 @@
     <ClInclude Include="..\src\Timer.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\crc.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\AMD_Mesh.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="..\src\Geometry.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -101,6 +92,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Timer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\crc.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
