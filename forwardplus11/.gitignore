@@ -8,6 +8,7 @@
 [Dd]esktop_*/
 ForwardPlus11_Debug_*.*
 ForwardPlus11_Release_*.*
+bin/*.*
 
 # Visual Studo 2015 cache/options directory
 .vs/
@@ -19,6 +20,8 @@ ipch/
 *.opensdf
 *.sdf
 *.cachefile
+*.opendb
+*.VC.db
 
 # Visual Studio profiler
 *.psess
