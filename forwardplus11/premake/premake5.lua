@@ -13,11 +13,11 @@ workspace (_AMD_SAMPLE_NAME)
       system "Windows"
       architecture "x64"
 
-externalproject "AMD_SDK"
+externalproject "AMD_SDK_Minimal"
    kind "StaticLib"
    language "C++"
    location "../../AMD_SDK/build"
-   filename ("AMD_SDK" .. _AMD_VS_SUFFIX)
+   filename ("AMD_SDK_Minimal" .. _AMD_VS_SUFFIX)
    uuid "EBB939DC-98E4-49DF-B1F1-D2E80A11F60A"
 
 externalproject "DXUT"
@@ -53,7 +53,7 @@ project (_AMD_SAMPLE_NAME)
 
    files { "../src/**.h", "../src/**.cpp", "../src/**.rc", "../src/**.manifest", "../src/**.hlsl" }
    includedirs { "../src/ResourceFiles" }
-   links { "AMD_SDK", "DXUT", "DXUTOpt", "d3dcompiler", "dxguid", "winmm", "comctl32", "Usp10", "Shlwapi" }
+   links { "AMD_SDK_Minimal", "DXUT", "DXUTOpt", "d3dcompiler", "dxguid", "winmm", "comctl32", "Usp10", "Shlwapi" }
 
    filter "configurations:Debug"
       defines { "WIN32", "_DEBUG", "DEBUG", "PROFILE", "_WINDOWS", "_WIN32_WINNT=0x0601" }

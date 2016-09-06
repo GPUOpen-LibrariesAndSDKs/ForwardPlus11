@@ -146,7 +146,7 @@
     <ProjectReference Include="..\..\DXUT\Core\DXUT_2013.vcxproj">
       <Project>{85344B7F-5AA0-4E12-A065-D1333D11F6CA}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\AMD_SDK\build\AMD_SDK_2013.vcxproj">
+    <ProjectReference Include="..\..\AMD_SDK\build\AMD_SDK_Minimal_2013.vcxproj">
       <Project>{EBB939DC-98E4-49DF-B1F1-D2E80A11F60A}</Project>
     </ProjectReference>
   </ItemGroup>

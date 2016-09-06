@@ -147,7 +147,7 @@ if not exist "..\bin\d3dcompiler_47.dll" if exist "$(ProgramFiles)\Windows Kits\
     <ProjectReference Include="..\..\DXUT\Core\DXUT_2012.vcxproj">
       <Project>{85344B7F-5AA0-4E12-A065-D1333D11F6CA}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\AMD_SDK\build\AMD_SDK_2012.vcxproj">
+    <ProjectReference Include="..\..\AMD_SDK\build\AMD_SDK_Minimal_2012.vcxproj">
       <Project>{EBB939DC-98E4-49DF-B1F1-D2E80A11F60A}</Project>
     </ProjectReference>
   </ItemGroup>
