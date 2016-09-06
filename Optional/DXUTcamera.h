@@ -152,6 +152,7 @@ public:
     // Functions to change camera matrices
     virtual void Reset();
     virtual void SetViewParams( _In_ DirectX::FXMVECTOR vEyePt, _In_ DirectX::FXMVECTOR vLookatPt );
+    virtual void SetViewParams( _In_ DirectX::FXMVECTOR vEyePt, _In_ DirectX::FXMVECTOR vLookatPt, _In_ DirectX::FXMVECTOR vUp );
     virtual void SetProjParams( _In_ float fFOV, _In_ float fAspect, _In_ float fNearPlane, _In_ float fFarPlane );
 
     // Functions to change behavior
@@ -235,6 +236,7 @@ protected:
     DirectX::XMFLOAT3 m_vDefaultLookAt;     // Default LookAt position
     DirectX::XMFLOAT3 m_vEye;               // Camera eye position
     DirectX::XMFLOAT3 m_vLookAt;            // LookAt position
+    DirectX::XMFLOAT3 m_vUp;                // Up position
     float m_fCameraYawAngle;                // Yaw angle of camera
     float m_fCameraPitchAngle;              // Pitch angle of camera
 

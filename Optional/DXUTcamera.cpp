@@ -256,6 +256,35 @@ void CBaseCamera::SetViewParams( FXMVECTOR vEyePt, FXMVECTOR vLookatPt )
     m_fCameraPitchAngle = -atan2f( zBasis.y, fLen );
 }
 
+//--------------------------------------------------------------------------------------
+// Client can call this to change the position and direction of camera
+//--------------------------------------------------------------------------------------
+_Use_decl_annotations_
+void CBaseCamera::SetViewParams( FXMVECTOR vEyePt, FXMVECTOR vLookatPt, FXMVECTOR vUp )
+{
+    XMStoreFloat3( &m_vEye, vEyePt );
+    XMStoreFloat3( &m_vDefaultEye, vEyePt );
+    XMStoreFloat3( &m_vUp, vUp );
+
+    XMStoreFloat3( &m_vLookAt, vLookatPt );
+    XMStoreFloat3( &m_vDefaultLookAt , vLookatPt );
+
+    // Calc the view matrix
+    XMMATRIX mView = XMMatrixLookAtLH( vEyePt, vLookatPt, vUp );
+    XMStoreFloat4x4( &m_mView, mView );
+
+    XMMATRIX mInvView = XMMatrixInverse( nullptr, mView );
+
+    // The axis basis vectors and camera position are stored inside the 
+    // position matrix in the 4 rows of the camera's world matrix.
+    // To figure out the yaw/pitch of the camera, we just need the Z basis vector
+    XMFLOAT3 zBasis;
+    XMStoreFloat3( &zBasis, mInvView.r[2] );
+
+    m_fCameraYawAngle = atan2f( zBasis.x, zBasis.z );
+    float fLen = sqrtf( zBasis.z * zBasis.z + zBasis.x * zBasis.x );
+    m_fCameraPitchAngle = -atan2f( zBasis.y, fLen );
+}
 
 //--------------------------------------------------------------------------------------
 // Calculates the projection matrix based on input params
